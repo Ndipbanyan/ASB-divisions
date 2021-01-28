@@ -1,8 +1,8 @@
 
-import {Container} from './components/components.style'
+import Division from './Modules/Division/Division'
 function App() {
   return (
-    <Container/>
+   <Division/>
   );
 }
 
