@@ -9,17 +9,17 @@ background:tomato;
 jus */
 `;
 export const Container = styled.div.attrs((props) => ({
-  width: props.width || "100%",
-  height: props.height || "5%",
+  width: props.width || "90%",
+  height: props.height || "90%",
   background: props.background || "#ffffff",
   // border: props.border || "none",
   display: props.display || "flex",
   justify: props.justify || "space-between",
-  align:props.align ,
+  align: props.align,
   radius: props.radius || "4px",
   margin: props.margin,
   pad: props.pad,
-  border:props.border,
+  border: props.border,
   font: props.font,
 }))`
   width: ${(props) => props.width};
@@ -27,12 +27,35 @@ export const Container = styled.div.attrs((props) => ({
   background: ${(props) => props.background};
   display: ${(props) => props.display};
   font-size: ${(props) => props.font};
-  align-items: ${props =>props.align};
+  align-items: ${(props) => props.align};
   justify-content: ${(props) => props.justify};
   border-radius: ${(props) => props.radius};
-  margin:${props => props.margin};
-  padding-left:${props=>props.pad};
-  border: ${props=>props.boder};
+  margin: ${(props) => props.margin};
+  padding-left: ${(props) => props.pad};
+  padding-right: ${(props) => props.pad};
+  border: ${(props) => props.border};
+`
+ export const Nav = styled.div`
+   background: #fffffd;
+   width: 100%;
+   height: 5%;
+   display: flex;
+   align-items: center;
+   justify-content:space-between;
+   border-bottom: 1px solid #dce1e7;
+   
+ `;
+export const NavLeft = styled.div`
+  width:20%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+ `;
+export const NavRight = styled(NavLeft)`
+  
+  width: 80%;
+  
 `;
 
 export const Input = styled.input.attrs((props) => ({
@@ -56,3 +79,15 @@ display:flex;
 export const List = styled.li`
 
 `;
+
+export const Button = styled.button`
+display:flex;
+align-items:center;
+justify-content:flex-start;
+width:2rem;
+height:2rem;
+background:none;
+border:none;
+font-size:1rem;
+cursor: pointer;
+`
