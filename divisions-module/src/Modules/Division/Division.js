@@ -1,10 +1,10 @@
 import React from 'react'
-import { MainContainer } from '../common/Atoms.style'
+import { Container } from '../common/Atoms.style'
 import Navbar from '../Navbar/index'
 export default function Division() {
     return (
-        <MainContainer>
-          <Navbar/>  
-       </MainContainer>
-    )
+      <Container background="red" width="90%" height="94%" margin="auto">
+        {/* <Navbar /> */}
+      </Container>
+    );
 }
