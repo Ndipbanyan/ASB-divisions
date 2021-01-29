@@ -20,7 +20,7 @@ export default function index() {
           fontSize: "1rem",
         }}
       >
-        <img src="/images/castle.png" />
+        <img src="/images/castle.png" alt="castle"/>
         <h5>Division Summary</h5>
       </div>
       {summary.map((item) => {
