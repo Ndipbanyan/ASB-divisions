@@ -2,7 +2,7 @@ import React from 'react'
 import { useMediaQuery } from "react-responsive";
 import {Listing,List } from '../common/Atoms.style'
 import { Container,Button } from '../common/Atoms.style'
-import {GiHamburgerMenu} from 'react-icons/gi'
+
 export default function Menu() {
     const list = [
       { title: "Home", src: "/images/home.png" },
@@ -33,9 +33,9 @@ export default function Menu() {
           </Listing>
         )}
         {isTabletOrMobileDevice && (
-          <Button>
-            <GiHamburgerMenu />
-          </Button>
+          <div >
+            <img src="/images/logo.png" alt="logo" />
+          </div>
         )}
       </Container>
     );

@@ -91,3 +91,6 @@ border:none;
 font-size:1rem;
 cursor: pointer;
 `
+export const Card = styled.div`
+
+`
