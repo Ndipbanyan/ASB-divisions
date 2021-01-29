@@ -13,14 +13,14 @@ export default function Right() {
     return (
       <NavRight>
         <Search />
+        <Link to="/notifications">
+          <IoIosNotifications />
+        </Link>
         {isTabletOrMobileDevice && (
           <Button>
             <GiHamburgerMenu />
           </Button>
         )}
-        <Link to="/notifications">
-          <IoIosNotifications />
-        </Link>
       </NavRight>
     );
 }
