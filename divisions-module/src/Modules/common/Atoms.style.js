@@ -1,18 +1,15 @@
 import styled from "styled-components"
 
+
 export const MainContainer = styled.div`
-width:100vw;
-height:100vh;
-background:tomato;
-/* padding:0 1rem 4rem 1rem; */
-/* align-items:center;
-jus */
+  width: 100vw;
+  height: 100vh;
+  background: #edf6ff;
 `;
 export const Container = styled.div.attrs((props) => ({
   width: props.width || "90%",
   height: props.height || "90%",
   background: props.background || "#ffffff",
-  // border: props.border || "none",
   display: props.display || "flex",
   direction:props.direction,
   justify: props.justify || "space-between",
@@ -116,12 +113,17 @@ export const Card = styled.div`
 `;
 export const SideCard = styled.div.attrs((props) => ({
   row: props.row || "2",
-  column:props.column ||"1"
-  
+  column: props.column || "1",
+  box: props.box || "0px 4px 30px rgba(192, 192, 192, 0.25",
+  background: props.background || "#ffffff",
 }))`
-grid-row:${props=>props.row};
-grid-column:${props=>props.column};
-padding:.6rem;
-background:white;
-font-size:1rem;
-`
+  grid-row: ${(props) => props.row};
+  grid-column: ${(props) => props.column};
+  box-shadow: 0px 4px 30px rgba(192, 192, 192, 0.25);
+  border-radius: 6px;
+  /* box-shadow:${(props) => props.box}; */
+  /* padding: 0.4rem; */
+  background: ${(props) => props.background};
+  /* border: 1px solid; */
+  /* font-size: 1rem; */
+`;

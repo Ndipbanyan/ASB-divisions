@@ -4,6 +4,7 @@ import { IoChevronForwardSharp } from 'react-icons/io5'
 import Metrics from '../Metric/Metric'
 import Navbar from '../Navbar/index'
 import Summary from '../Summary/index'
+import History from '../History/index'
 export default function Division() {
     return (
       <Container
@@ -18,7 +19,6 @@ export default function Division() {
           style={{
             alignItems: "center",
             margin: ".5rem 0 .5rem 0",
-            // textAlign: "center",
           }}
         >
           Division <IoChevronForwardSharp />
@@ -26,7 +26,8 @@ export default function Division() {
         </div>
         <Wrapper>
           <Metrics />
-          <Summary/>
+          <Summary />
+          <History/>
           <Board/>
         </Wrapper>
       </Container>
