@@ -1,13 +1,16 @@
 import React from 'react'
 import { useMediaQuery } from "react-responsive";
-import {Listing,Logo,Span } from '../common/Atoms.style'
+import { Listing, Logo, Span } from '../common/Atoms.style'
+import {MdViewCarousel} from 'react-icons/md'
+import { IoHomeSharp } from "react-icons/io5";
+import { IoIosArchive } from "react-icons/io";
 
 
 export default function Menu() {
     const list = [
-      { title: "Home", src: "/images/home.png" },
-      { title: "Entries", src: "/images/entries.png" },
-      { title: "Division", src: "/images/division.png" },
+      { title: "Home", src: <IoHomeSharp/> },
+      { title: "Entries", src: <IoIosArchive/> },
+      { title: "Division", src: <MdViewCarousel/> },
     ];
     
     return (
@@ -22,11 +25,7 @@ export default function Menu() {
               const { title, src } = item;
               return (
                 <li key={title}>
-                  <img
-                    src={src}
-                    alt={title}
-                    style={{ marginRight: ".5rem", marginLeft: ".5rem" }}
-                  />
+                  <span style={{ margin:".4rem", }}>{src}</span>
                   {title}
                 </li>
               );

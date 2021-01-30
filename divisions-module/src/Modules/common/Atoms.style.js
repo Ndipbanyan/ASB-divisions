@@ -75,7 +75,6 @@ export const Board = styled.div`
    }
  `;
 export const NavLeft = styled.div`
-  background:green;
   width: 20%;
   height: 100%;
   display: flex;
@@ -101,61 +100,78 @@ export const NavLeft = styled.div`
     align-items: center;
     width: 70%;
     justify-content: space-around;
+    color: #778699;
+
     @media only screen and (max-width: 600px) {
       display: none;
     }
   `;
  
 export const NavRight = styled(NavLeft)`
-  background: yellow;
   width: 80%;
+
   @media only screen and (min-width: 600px) {
-    width: 40%;
+    width: 30%;
     font-size:1.5rem;
   }
   `
   export const SearchWrap = styled.div`
-  width:8rem;
-  height:.8rem;
-  font-size:.6rem;
-  align-items:center;
-  padding:.5rem;
-  background:#ffffff;
-  border:1px solid #dce1e7;
-  @media only screen and (min-width: 600px) {
-   
-  }
-`;
-
-
-
+    width: 8rem;
+    height: 0.8rem;
+    font-size: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background: #ffffff;
+    border: 1px solid #dce1e7;
+    border-radius: 4px;
+    @media only screen and (min-width: 600px) {
+      font-size: 1rem;
+      width: 12rem;
+      height:2rem;
+      
+    }
+  `;
 export const Input = styled.input.attrs((props) => ({
   type: "text",
-  size: props.size || ".9em",
-  width:props.size ||"7rem"
 }))`
-  background: #ffffdd;
+  outline: none;
+  border: none;
+  width: 7rem;
+  height:.9rem;
+  @media only screen and (min-width: 600px) {
+    font-size: .8rem;
+    width: 10rem;
+    height:1rem;
+  }
+`;
+export const UserButton = styled.div`
+  display:flex;
+  font-size:2rem;
+  text-align:center;
   outline:none;
-  border:none;
-  width:${props => props.width};
-  height:${props => props.size};
-
-  
+  background:none;
+  cursor: pointer;
+`;
+export const UserButton1 = styled(UserButton)`
+  font-size: 1rem;
+  color: #72809d;
 `;
 
-
-
-export const Button = styled.button`
-display:flex;
-align-items:center;
-justify-content:flex-start;
-width:2rem;
-height:2rem;
-background:none;
-border:none;
-font-size:1rem;
-cursor: pointer;
-`
+export const Menu = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+`;
 export const Card = styled.div`
   background: #ffffff;
   grid-row: 1;
