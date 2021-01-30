@@ -1,42 +1,38 @@
 import React from 'react'
 import { useMediaQuery } from "react-responsive";
-import {Listing,List } from '../common/Atoms.style'
-import { Container,Button } from '../common/Atoms.style'
+import {Listing,Logo,Span } from '../common/Atoms.style'
+
 
 export default function Menu() {
     const list = [
       { title: "Home", src: "/images/home.png" },
       { title: "Entries", src: "/images/entries.png" },
-      { title: "division", src: "/images/division.png" },
+      { title: "Division", src: "/images/division.png" },
     ];
-    const isDesktopOrLaptop = useMediaQuery({
-      query: "(min-device-width: 1224px)",
-    });
-    const isBigScreen = useMediaQuery({ query: "(min-device-width: 1824px)" });
-    const isTabletOrMobile = useMediaQuery({ query: "(min-width: 768px)" });
-    const isTabletOrMobileDevice = useMediaQuery({
-      query: "(max-device-width: 1224px)",
-    });
+    
     return (
-      <Container >
-        {isTabletOrMobile && (
+      <>
+        <Logo>
+          <img src="/images/logo.png" alt="logo" />
+          <Span>FE Engineer Test 1</Span>
+        </Logo>
+        
           <Listing>
             {list.map((item) => {
               const { title, src } = item;
               return (
-                <List key={title}>
-                  <img src={src} alt={title} />
+                <li key={title}>
+                  <img
+                    src={src}
+                    alt={title}
+                    style={{ marginRight: ".5rem", marginLeft: ".5rem" }}
+                  />
                   {title}
-                </List>
+                </li>
               );
             })}
           </Listing>
-        )}
-        {isTabletOrMobileDevice && (
-          <div >
-            <img src="/images/logo.png" alt="logo" />
-          </div>
-        )}
-      </Container>
+        
+      </>
     );
 }

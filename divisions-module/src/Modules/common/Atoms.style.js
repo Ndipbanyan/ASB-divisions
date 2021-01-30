@@ -8,13 +8,13 @@ export const MainContainer = styled.div`
 `;
 export const Container = styled.div.attrs((props) => ({
   width: props.width || "90%",
-  height: props.height || "90%",
+  height: props.height || "95%",
   background: props.background || "#ffffff",
   display: props.display || "flex",
-  direction:props.direction,
+  direction: props.direction,
   justify: props.justify || "space-between",
   align: props.align,
-  radius: props.radius || "4px",
+ 
   margin: props.margin,
   pad: props.pad,
   border: props.border,
@@ -32,66 +32,118 @@ export const Container = styled.div.attrs((props) => ({
   margin: ${(props) => props.margin};
   padding-left: ${(props) => props.pad};
   padding-right: ${(props) => props.pad};
-  border: ${(props) => props.border};
-`
+  
+    @media only screen and (min-width: 768px) {
+      width:98%;
+      height:95%;
+    
+    }
+`;
+
 export const Wrapper = styled.div`
-  background: red;
+  /* background: red; */
+  display: flex;
   width: 100%;
   height: 95%;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 18% 1fr 1fr;
-  column-gap: 20px;
-  row-gap: 15px;
+  flex-wrap: wrap;
+
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 18% 1fr 1fr;
+    column-gap: 20px; 
+    row-gap: 15px;
+  }
 `;
 export const Board = styled.div`
-  background: blue;
+  /* background: blue; */
   grid-row: 2 / span 3;
   grid-column: 2 / span5;
   display: grid;
 `;
  export const Nav = styled.div`
-   background: #fffffd;
+   background: #ffffff;
    width: 100%;
    height: 5%;
    display: flex;
    align-items: center;
-   justify-content:space-between;
+   justify-content: space-between;
    border-bottom: 1px solid #dce1e7;
-   
+   font-size: 1rem;
+   @media only screen and (min-width: 768px) {
+
+   }
  `;
 export const NavLeft = styled.div`
-  width:20%;
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
- `;
+  background:green;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media only screen and (min-width: 600px) {
+    width: 35%;
+  }
+  `;
+  export const Logo = styled.div`
+    display:flex;
+    align-items:center;
+    width: 50%;
+  `;
+  export const Span = styled.span`
+    @media only screen and (max-width: 600px) {
+      display:none;
+    }
+  `;
+  export const Listing = styled.ul`
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: space-around;
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
+  `;
+ 
 export const NavRight = styled(NavLeft)`
+  background: yellow;
   width: 80%;
+  @media only screen and (min-width: 600px) {
+    width: 40%;
+    font-size:1.5rem;
+  }
+  `
+  export const SearchWrap = styled.div`
+  width:8rem;
+  height:.8rem;
+  font-size:.6rem;
+  align-items:center;
+  padding:.5rem;
+  background:#ffffff;
+  border:1px solid #dce1e7;
+  @media only screen and (min-width: 600px) {
+   
+  }
 `;
+
+
 
 export const Input = styled.input.attrs((props) => ({
   type: "text",
-  size: props.size || ".8em",
-  width:props.size ||"6rem"
+  size: props.size || ".9em",
+  width:props.size ||"7rem"
 }))`
-  background: #ffffff;
+  background: #ffffdd;
   outline:none;
   border:none;
   width:${props => props.width};
-  height:${props => props.size}
+  height:${props => props.size};
+
   
 `;
 
-export const Listing = styled.ul`
-list-style-type:none;
-display:flex;
 
-`;
-export const List = styled.li`
-
-`;
 
 export const Button = styled.button`
 display:flex;
@@ -105,11 +157,15 @@ font-size:1rem;
 cursor: pointer;
 `
 export const Card = styled.div`
-  grid-row: 1;
   background: #ffffff;
+  grid-row: 1;
   box-shadow: 0px 4px 30px rgba(192, 192, 192, 0.25);
   border-radius: 6px;
   padding: 2rem 1rem 0 1rem;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 export const SideCard = styled.div.attrs((props) => ({
   row: props.row || "2",
@@ -126,4 +182,7 @@ export const SideCard = styled.div.attrs((props) => ({
   background: ${(props) => props.background};
   /* border: 1px solid; */
   /* font-size: 1rem; */
+  @media only screen and (max-width: 768px) {
+
+  }
 `;

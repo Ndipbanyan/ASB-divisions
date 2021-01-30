@@ -8,7 +8,7 @@ import History from '../History/index'
 export default function Division() {
     return (
       <Container
-        background="green"
+        // background="green"
         margin="auto"
         border="none"
         radius="none"
@@ -21,14 +21,16 @@ export default function Division() {
             margin: ".5rem 0 .5rem 0",
           }}
         >
-          Division <IoChevronForwardSharp />
-          Module
+          <span >
+            Division <IoChevronForwardSharp />
+            Module
+          </span>
         </div>
         <Wrapper>
           <Metrics />
           <Summary />
-          <History/>
-          <Board/>
+          <History />
+          <Board />
         </Wrapper>
       </Container>
     );

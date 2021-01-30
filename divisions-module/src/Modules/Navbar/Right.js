@@ -8,7 +8,7 @@ import { NavRight, Button } from '../common/Atoms.style'
 import Search from '../common/Search'
 export default function Right() {
     const isTabletOrMobileDevice = useMediaQuery({
-      query: "(max-device-width: 1224px)",
+      query: "(max-width: 1224px)",
     });
     return (
       <NavRight>
