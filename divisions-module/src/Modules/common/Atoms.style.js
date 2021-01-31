@@ -41,7 +41,6 @@ export const Container = styled.div.attrs((props) => ({
 `;
 
 export const Wrapper = styled.div`
-  background: red;
   display: flex;
   width: 100%;
   height: 95%;
@@ -54,7 +53,6 @@ export const Wrapper = styled.div`
     grid-template-rows: 18% 1fr 1fr;
     column-gap: 20px; 
     row-gap: 15px;
-    background:blue;
   }
 `;
 export const DivisionText = styled.div`
