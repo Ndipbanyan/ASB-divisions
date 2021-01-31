@@ -127,13 +127,13 @@ export const Span = styled.span`
   `;
  
 export const NavRight = styled(NavLeft)`
-  width: 70%;
+  width: 28%;
+  font-size: 1.5rem;
 
   @media only screen and (max-width: 600px) {
     width: 80%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
-  
 `;
   export const SearchWrap = styled.div`
     width: 8rem;
@@ -147,8 +147,8 @@ export const NavRight = styled(NavLeft)`
     border-radius: 4px;
     @media only screen and (min-width: 600px) {
       font-size: 1rem;
-      width: 12rem;
-      height: 2rem;
+      width: 10rem;
+      height: 1.5rem;
     }
     @media only screen and (max-width: 768px) {
       width: 10rem;
@@ -170,7 +170,7 @@ export const Input = styled.input.attrs((props) => ({
 `;
 export const UserButton = styled.div`
   display: flex;
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-align: center;
   outline: none;
   background: none;
