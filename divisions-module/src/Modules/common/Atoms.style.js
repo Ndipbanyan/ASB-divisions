@@ -41,20 +41,20 @@ export const Container = styled.div.attrs((props) => ({
 `;
 
 export const Wrapper = styled.div`
-  /* background: red; */
+  background: red;
   display: flex;
   width: 100%;
   height: 95%;
   flex-wrap: wrap;
-  align-items:center;
-  align-items:center;
+  justify-content:center;
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: 18% 1fr 1fr;
     column-gap: 20px; 
     row-gap: 15px;
+    background:blue;
   }
 `;
 export const DivisionText = styled.div`
@@ -220,7 +220,7 @@ export const Card = styled.div`
   @media only screen and (max-width: 600px) {
     font-size: 1rem;
     padding: .4rem .2rem;
-    margin:1rem;
+    margin:.5rem;
     width:8rem;
     height:5rem;
   }

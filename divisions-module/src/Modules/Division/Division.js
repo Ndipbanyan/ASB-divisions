@@ -12,7 +12,7 @@ export default function Division() {
         margin="auto"
         border="none"
         radius="none"
-        font=".5rem"
+       
         direction="column"
       >
         <DivisionText>   
